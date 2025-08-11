@@ -1,33 +1,43 @@
 import os
 import shutil
-from sklearn.model_selection import train_test_split
+import random
 
 # Paths
-source_dir = r"F:\Machine Learning\DRP\drp\test"  
-train_dir = r"F:\Machine Learning\DRP\drp\train"
-val_dir = r"F:\Machine Learning\DRP\drp\val"
+source_dir = r"F:\Machine Learning\DRP\drp\source images"
+base_dir = r"F:\Machine Learning\DRP\drp\dataset"  # New folder for split data
 
-# Create output dirs
-for folder in [train_dir, val_dir]:
-    os.makedirs(folder, exist_ok=True)
+# Percentages
+train_split = 0.7
+val_split = 0.15
+test_split = 0.15
+
+# Make output folders
+for split in ["train", "val", "test"]:
+    for class_name in os.listdir(source_dir):
+        os.makedirs(os.path.join(base_dir, split, class_name), exist_ok=True)
 
 # Loop through each class folder
 for class_name in os.listdir(source_dir):
     class_path = os.path.join(source_dir, class_name)
-    if not os.path.isdir(class_path):
-        continue
+    if os.path.isdir(class_path):
+        images = os.listdir(class_path)
+        random.shuffle(images)
 
-    images = os.listdir(class_path)
-    train_files, val_files = train_test_split(images, test_size=0.2, random_state=42)
+        # Calculate split indexes
+        train_end = int(len(images) * train_split)
+        val_end = train_end + int(len(images) * val_split)
 
-    # Create subfolders for the class in train and val
-    os.makedirs(os.path.join(train_dir, class_name), exist_ok=True)
-    os.makedirs(os.path.join(val_dir, class_name), exist_ok=True)
+        # Split images
+        train_files = images[:train_end]
+        val_files = images[train_end:val_end]
+        test_files = images[val_end:]
 
-    # Move/copy files
-    for file in train_files:
-        shutil.copy(os.path.join(class_path, file), os.path.join(train_dir, class_name, file))
-    for file in val_files:
-        shutil.copy(os.path.join(class_path, file), os.path.join(val_dir, class_name, file))
+        # Copy files
+        for img in train_files:
+            shutil.copy(os.path.join(class_path, img), os.path.join(base_dir, "train", class_name))
+        for img in val_files:
+            shutil.copy(os.path.join(class_path, img), os.path.join(base_dir, "val", class_name))
+        for img in test_files:
+            shutil.copy(os.path.join(class_path, img), os.path.join(base_dir, "test", class_name))
 
-print("✅ Data split complete!")
+print("✅ Dataset split complete!")
