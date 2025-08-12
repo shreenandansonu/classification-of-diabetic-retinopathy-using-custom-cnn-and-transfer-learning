@@ -8,7 +8,8 @@ The diagnosis of diabetic retinopathy (DR) through colour fundus images requires
 - [x] Use the output features as input to machine learning classifer like SVM and Random Forest.  
 - [x] Use different parameters like specificity, precission, recall, acuracy etc to assess the model performance.
 
-### The CNN architecture (sustom )
+## **The CNN architecture** *(custom)*
+
 
 | Layer Number | Layer Type         | Filter/Units | Kernel Size | Activation | Output Shape (Approx) | Notes                       |
 | ------------ | ------------------ | ------------ | ----------- | ---------- | --------------------- | --------------------------- |
@@ -30,7 +31,7 @@ The diagnosis of diabetic retinopathy (DR) through colour fundus images requires
 | 16           | Dense (Output)     | num\_classes | -           | Softmax    | (num\_classes,)       | Output classification layer |
 
 
-### Results and inter pretations
+## **Results and inter pretations**
 
 | Metric       | Support Vector Machine               | Random Forest                     | Conclusion                          |
 |--------------|------------------------------------|----------------------------------|-----------------------------------|
@@ -42,6 +43,6 @@ The diagnosis of diabetic retinopathy (DR) through colour fundus images requires
 | Confusion Matrix | ![SVM Confusion Matrix](./results/svm.png) | ![RF Confusion Matrix](./results/RF.png)    | Visual comparison of errors        |
 
 
-## Conclusion 
+## **Conclusion** 
 
 With custom CNN of 6 layers and classification using  SVM and Random forest we can predict with 71% accuracy.
