@@ -32,14 +32,14 @@ The diagnosis of diabetic retinopathy (DR) through colour fundus images requires
 
 ### Results and inter pretations
 
-|  | Support vector Machine | Random Forest |
-| --- | ------------ | ------------ |
-| Accuracy | 71.8% | 72.0% |
-| Precision | 59.7% | 67.5% |
-| Sensitivity | 71.7% | 72.05% |
-| Specificity | 92.2% | 91.7% |
-| F1 Score |64.1% | 68.1% |
- Confussion Matrix | ![svm](./results/svm.png) | ![rf](./results/rf.png) |
+| Metric       | Support Vector Machine               | Random Forest                     | Conclusion                          |
+|--------------|------------------------------------|----------------------------------|-----------------------------------|
+| Accuracy     | <span style="color:green;">71.8%</span>   | <span style="color:green;">72.0%</span>     | Comparable accuracy, RF slightly better |
+| Precision    | <span style="color:red;">59.7%</span>     | <span style="color:orange;">67.5%</span>    | RF has notably better precision    |
+| Sensitivity  | <span style="color:green;">71.7%</span>   | <span style="color:green;">72.05%</span>    | Similar recall/sensitivity         |
+| Specificity  | <span style="color:green;">92.2%</span>   | <span style="color:green;">91.7%</span>     | Both models have high specificity  |
+| F1 Score     | <span style="color:red;">64.1%</span>     | <span style="color:orange;">68.1%</span>    | RF better balance of precision and recall |
+| Confusion Matrix | ![SVM Confusion Matrix](./results/svm.png) | ![RF Confusion Matrix](./results/rf.png)    | Visual comparison of errors        |
 
 
 ## Conclusion 
