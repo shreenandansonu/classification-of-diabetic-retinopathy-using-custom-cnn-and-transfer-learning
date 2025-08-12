@@ -39,7 +39,7 @@ The diagnosis of diabetic retinopathy (DR) through colour fundus images requires
 | Sensitivity | 71.7% | 72.05% |
 | Specificity | 92.2% | 91.7% |
 | F1 Score |64.1% | 68.1% |
- Confussion Matrix | ![svm](./results/svm.png) | ![svm](./results/rf.png) |
+ Confussion Matrix | ![svm](./results/svm.png) | ![rf](./results/rf.png) |
 
 
 ## Conclusion 
