@@ -1,5 +1,7 @@
 # **CLASSIFICATION of Diabetic Retinopathy using CUSTOM CNN and TRANSFER LEARNING**
 
+[![License: MIT](https://img.shields.io/badge/LICENSE%20SOFTWARE-MIT-ef476f?style=flat-square)](LICENSE) ![Project Type](https://img.shields.io/badge/Project%20Type-CNN%20Classification-f77f00?style=flat-square) ![Category](https://img.shields.io/badge/Category-Biomedical%20Product-006d77?style=flat-square) [![Static Badge](https://img.shields.io/badge/Website-3c096c?style=flat-square)](https://shreenandansahu.netlify.app/)
+
 ![image.png](./results/thumbnail.png)
 
 The diagnosis of diabetic retinopathy (DR) through colour fundus images requires experienced clinicians to identify the presence and significance of many small features which, along with a complex grading system, makes this a difficult and time consuming task. The solution is to automate the classification using Ai based tools with proposed solution as follow.
