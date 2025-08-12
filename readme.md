@@ -39,7 +39,7 @@ The diagnosis of diabetic retinopathy (DR) through colour fundus images requires
 | Sensitivity  | <span style="color:green;">71.7%</span>   | <span style="color:green;">72.05%</span>    | Similar recall/sensitivity         |
 | Specificity  | <span style="color:green;">92.2%</span>   | <span style="color:green;">91.7%</span>     | Both models have high specificity  |
 | F1 Score     | <span style="color:red;">64.1%</span>     | <span style="color:orange;">68.1%</span>    | RF better balance of precision and recall |
-| Confusion Matrix | ![SVM Confusion Matrix](./results/svm.png) | ![RF Confusion Matrix](./results/rf.png)    | Visual comparison of errors        |
+| Confusion Matrix | ![SVM Confusion Matrix](./results/svm.png) | ![RF Confusion Matrix](./results/RF.png)    | Visual comparison of errors        |
 
 
 ## Conclusion 
